@@ -6,12 +6,28 @@
 # 938/938 ━━━━━━━━━━━━━━━━━━━━ 18s 19ms/step - accuracy: 0.9765 - loss: 0.0683
 
 # --- 5. 最終予測 (x_test.npy) をCSVに出力 ---
-# 313/313 ━━━━━━━━━━━━━━━━━━━━ 1s 2ms/step  
+
+# --- 最終モデルの検証データでの分類レポート ---
+#               precision    recall  f1-score   support
+
+#  T-shirt/top       0.88      0.89      0.88      1182
+#      Trouser       0.99      0.99      0.99      1222
+#     Pullover       0.88      0.88      0.88      1210
+#        Dress       0.90      0.93      0.92      1153
+#         Coat       0.89      0.86      0.87      1180
+#       Sandal       0.98      0.98      0.98      1215
+#        Shirt       0.79      0.79      0.79      1239
+#      Sneaker       0.97      0.95      0.96      1228
+#          Bag       0.98      0.98      0.98      1185
+#   Ankle boot       0.95      0.98      0.96      1186
+
+#     accuracy                           0.92     12000
+#    macro avg       0.92      0.92      0.92     12000
+# weighted avg       0.92      0.92      0.92     12000
+
 # 完了: 予測結果を data/classification/submission_optuna_best_cnn.csv に保存しました。
 # --- 最終モデルの検証データでの精度 ---
-# 最終モデルの検証精度: 99.01 %
-#おそらく過学習が起こっている。
-
+# 最終モデルの検証精度: 92.17 %
 import numpy as np
 import pandas as pd
 import sys

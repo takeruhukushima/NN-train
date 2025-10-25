@@ -31,7 +31,11 @@
 *   **`numpy/`**: ライブラリに頼らず、k-NN、ロジスティック回帰、SVM、MLPをNumPyで実装。
 *   **`keras/`**: Keras (TensorFlowバックエンド) を用いたMLP、CNNモデル。
 *   **`pytorch/`**: PyTorchを用いたMLPモデル。
-*   **`data/`**: 学習/テストデータ (`.npy`) と、各モデルの予測結果 (`.csv`) が格納されています。
+*   **`data/`**: このディレクトリには、モデルの学習と評価に使用するデータが格納して実行します。
+    *   `data/classification/x_train.npy`: 学習用の画像データ。
+    *   `data/classification/y_train.npy`: 学習用のラベルデータ。
+    *   `data/classification/x_test.npy`: テスト（評価）用の画像データ。
+    *   各モデルを実行すると、予測結果のCSVファイルもこのディレクトリ以下に保存されます。
 
 ## 🛠️ 使用技術・ライブラリ
 
@@ -65,11 +69,6 @@
     uv sync
     ```
     これにより、`pyproject.toml` と `uv.lock` に基づいた正確な環境が構築されます。
-データは
-data/classification/x_test.npy
-data/classification/x_train.npy
-data/classification/y_train.npy
-を想定しています。
 3.  **各モデルのスクリプトを実行:**
     各ディレクトリ内のPythonスクリプトを実行して、モデルの学習と予測を行います。
     ```bash
