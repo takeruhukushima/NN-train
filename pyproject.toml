@@ -1,0 +1,19 @@
+[project]
+name = "nn-training"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12, <3.13"
+
+dependencies = [
+    "pandas >= 2.2.0",
+    "scikit-learn >= 1.4.0",
+    "numpy >= 1.26.0",
+    "scipy >= 1.11.0",
+    "tensorflow >= 2.16.1",
+    "torch >= 2.3.1",
+    "torchvision >= 0.18.1",
+    "tqdm",
+    "optuna ~= 3.5.0",
+    "optuna-integration ~= 3.5.0"
+]
